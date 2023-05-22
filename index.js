@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const { usuario , pessoa} = require('./models');
+const {pessoa} = require('./models');
 
 const app = express();
 
