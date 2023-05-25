@@ -20,19 +20,25 @@ h2{
     background-color:  rgb(49, 6, 6);    
 }    
 .npc{
-    background-color:  (49, 6, 6);
-    display:grid;
+    background-color:  rgb(49, 6, 6);
+    display:inline-block;
     margin: 5px;
     border-radius: 30px;
     padding: 15px;
     font-size: 20px;
     color: #fff0b4 ;
     border: 2px solid yellow;
-    text-align: center;
 }
-   
+.tirulipa{
+   display:inline-table;
+   text-align: left;
+    padding: 15px;
+}   
     
-
+.tirulipa, button{
+     display:flex;
+     padding: 5px;
+}
     
 
 

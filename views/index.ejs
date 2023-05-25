@@ -13,15 +13,15 @@
 <h2>Pessoas Cadastradas</h2>
 
 <div class="npc">
-
-<% pessoas.forEach((pessoa) => { %>
-    <%= pessoa.nome %>
-    <%= pessoa.sobrenome %>
-    <%= pessoa.idade %>
-    <button name="apagar"><a href="/pessoas/delete?id=<%= pessoa.id %>" onclick=(confirmardelete())>Deletar Usuário</a></button>
-<% }) %>
-
-
+    <div class="tirulipa">
+        <% pessoas.forEach((pessoa) => { %>
+        <%= pessoa.nome %>
+        <%= pessoa.sobrenome %>
+         <%= pessoa.idade %>
+        <button name="apagar"><a href="/pessoas/delete?id=<%= pessoa.id %>" onclick=(confirmardelete())>Deletar Usuário</a></button>
+        <% }) %>
+    </div>
+</div>
 
 <script>
     function confirmardelete(){
@@ -33,6 +33,6 @@
      }
     }
 </script>
-</div>
+
 </body>
 </html>
