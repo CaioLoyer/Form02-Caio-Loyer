@@ -23,9 +23,9 @@ app.get('/pessoas/criar', async function(req, res){
 })
 
 
-app.post('/pessoas/adicionar', async function (req, res) {
+app.post('/pessoas/criar', async function (req, res) {
   try {
-    await Pessoa.create(req.body);
+    await pessoa.create(req.body);
     res.redirect('/pessoas');
   } catch (err) {
     console.error(err);
@@ -33,6 +33,16 @@ app.post('/pessoas/adicionar', async function (req, res) {
   }
 });
 
+
+app.get('/pessoas/delete', async function(req, res){
+  try {
+      await pessoa.destroy({ where: { id: req.query.id } });
+      res.redirect('/pessoas')
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: 'Durante a criação do usuario, um erro aconteceu!!' });
+  }
+})
 
 
 app.listen(3000, function() {

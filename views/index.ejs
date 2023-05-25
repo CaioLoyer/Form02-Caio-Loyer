@@ -1,3 +1,6 @@
 <% pessoas.forEach((pessoa) => { %>
     <%= pessoa.nome %>
+    <%= pessoa.sobrenome %>
+    <%= pessoa.idade %>
+    <button><a href="/pessoas/delete?id=<%= pessoa.id %>" >Deletar Usuário</a></button>
 <% }) %>
