@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Cadastro</title>
  </head>
  <body>
-   <h2>Utilize p formulário abaixo para se cadastrar</h2>
-    <form method="post" action="/pessoas/criar">
-      <label>Insira seus Dados no Formulario Abaixo</label> 
+   <h2>Utilize o formulário abaixo para se cadastrar</h2>
+
+<div class="cadastrarPessoa">
+
+    <form method="post" action="/pessoas/criar" name="cadastro" id="cadastro">
       
       <label>Nome:</label>
-            <input name="nome" id="nome"  type="text"/>
-                  <p></p>
-         
-
+            <input name="nome" id="nome"  type="text"  placeholder="nome"/>
+            <p></p>
+           
+                  
       <label>Sobrenome Completo:</label>
-            <input name="sobrenome" id="sobrenome" type="text"/>
+            <input name="sobrenome" type="text" placeholder="sobrenome"/>
             <p></p>
 
 
- 
       <label>Idade Atual:</label>
-            <input name="idade" id="idade"  type="text"/>
+            <input name="idade" type="text" placeholder="idade"/>
             <p></p>
+           
 
-      
-      <input type="submit" value="Enviar Dados">
+      <input name="enviar" type="submit" value="Enviar Dados">
+</div>
 
     </form>
   </body>

@@ -1,6 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>pessoas</title>
+
+</head>
+<body>
+<h2>Pessoas Cadastradas</h2>
+
+<div class="npc">
+
 <% pessoas.forEach((pessoa) => { %>
     <%= pessoa.nome %>
     <%= pessoa.sobrenome %>
     <%= pessoa.idade %>
-    <button><a href="/pessoas/delete?id=<%= pessoa.id %>" >Deletar Usuário</a></button>
+    <button name="apagar"><a href="/pessoas/delete?id=<%= pessoa.id %>" onclick=(confirmardelete())>Deletar Usuário</a></button>
 <% }) %>
+
+
+
+<script>
+    function confirmardelete(){
+
+     confirm('tem certeza de que deseja deletar este usuário?');
+     if(confirm==true){alert('usuário deletado com sucesso!')
+     }else{
+        {alert('o usuário será mantido')}
+     }
+    }
+</script>
+</div>
+</body>
+</html>
