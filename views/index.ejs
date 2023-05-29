@@ -18,8 +18,12 @@
     <%= pessoa.nome %>
     <%= pessoa.sobrenome %>
     <%= pessoa.idade %>
-    <button name="apagar"><a href="/pessoas/delete?id=<%= pessoa.id %>" onclick=(confirmardelete())>Deletar Usuário</a></button>
+
+    <button class="apagar">
+        <a href="/pessoas/delete?id=<%= pessoa.id %>" onclick=(confirmardelete())>Deletar Usuário</a>
+    </button>
 <% }) %>
+</div>
 
 
 
@@ -27,12 +31,14 @@
     function confirmardelete(){
 
      confirm('tem certeza de que deseja deletar este usuário?');
-     if(confirm==true){alert('usuário deletado com sucesso!')
-     }else{
+     if(confirm===true)
+     {alert('usuário deletado com sucesso!')
+    }else{
         {alert('o usuário será mantido')}
      }
     }
 </script>
-</div>
+
 </body>
 </html>
+
